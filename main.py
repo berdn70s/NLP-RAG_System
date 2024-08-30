@@ -75,10 +75,10 @@ def generate_response(retrieved_logs, query):
 
 # Sistemi entegre etmek için bir fonksiyon yazdım, bu fonksiyon hem bilgi almayı hem de yanıt oluşturmayı içeriyor
 def rag_qa_system(query):
-    # Sorguya göre en alakalı log girişlerini getirdim
+    # Sorguya göre en alakalı log girişlerini getirdim, retriaval.
     retrieved_logs = retrieve_logs(query, index, model)
 
-    # Alınan loglar üzerinden bir yanıt oluşturdum
+    # Alınan loglar üzerinden bir yanıt oluşturdum, generation.
     response = generate_response(retrieved_logs, query)
 
     return response
